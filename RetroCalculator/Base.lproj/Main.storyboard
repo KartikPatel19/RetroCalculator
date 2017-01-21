@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,14 +24,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZIm-Xh-qVp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="4Ee-lt-UeT">
-                                <rect key="frame" x="0.0" y="409" width="320" height="71"/>
+                                <rect key="frame" x="0.0" y="497" width="320" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="1Gl-p5-vzk"/>
                                 </constraints>
@@ -190,6 +190,9 @@
                                                     <constraint firstAttribute="width" constant="56" id="k8G-sU-tuM"/>
                                                 </constraints>
                                                 <state key="normal" image="divide"/>
+                                                <connections>
+                                                    <action selector="onDividePrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EP4-tL-e6Y"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7W-gI-lUO">
                                                 <rect key="frame" x="140" y="0.0" width="56" height="58"/>
@@ -198,6 +201,9 @@
                                                     <constraint firstAttribute="width" constant="56" id="kac-6F-dyr"/>
                                                 </constraints>
                                                 <state key="normal" image="multiply"/>
+                                                <connections>
+                                                    <action selector="onMultiplyPrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7T4-Vj-GFG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -211,6 +217,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="IuD-nB-P8N"/>
                                                 </constraints>
                                                 <state key="normal" image="subtract"/>
+                                                <connections>
+                                                    <action selector="onSubtractPrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdk-gH-VFr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onc-6N-bsE">
                                                 <rect key="frame" x="70" y="0.0" width="56" height="58"/>
@@ -219,6 +228,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="zc9-hm-TyP"/>
                                                 </constraints>
                                                 <state key="normal" image="add"/>
+                                                <connections>
+                                                    <action selector="onAddPrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDJ-3Q-GsB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-Ud-Mg0">
                                                 <rect key="frame" x="140" y="0.0" width="56" height="58"/>
@@ -227,17 +239,31 @@
                                                     <constraint firstAttribute="height" constant="58" id="p0u-mG-5f5"/>
                                                 </constraints>
                                                 <state key="normal" image="equal"/>
+                                                <connections>
+                                                    <action selector="onEqualPrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0C-8Z-zBs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-Vp-Rh3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-Vp-Rh3">
                                 <rect key="frame" x="23" y="34" width="271" height="31"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTI-CB-2ve">
+                                <rect key="frame" x="80" y="507" width="156" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="5Wa-NG-NMV"/>
+                                    <constraint firstAttribute="height" constant="53" id="iSG-Br-xEs"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPrassedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="toL-FK-tz9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -249,20 +275,26 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ee-lt-UeT" secondAttribute="bottom" id="KaZ-AT-4le"/>
                             <constraint firstItem="0pO-Vp-Rh3" firstAttribute="leading" secondItem="tI9-en-cv7" secondAttribute="leading" constant="15" id="ORD-oM-xvt"/>
                             <constraint firstItem="FBw-XU-AbV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T2d-9I-PwP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WTI-CB-2ve" secondAttribute="trailing" constant="68" id="UaT-QS-Xux"/>
                             <constraint firstItem="Il6-z7-7PL" firstAttribute="centerX" secondItem="FBw-XU-AbV" secondAttribute="centerX" id="ZA1-OG-pKZ"/>
                             <constraint firstItem="tI9-en-cv7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="Zh6-dA-Jdh"/>
                             <constraint firstItem="Il6-z7-7PL" firstAttribute="centerY" secondItem="FBw-XU-AbV" secondAttribute="centerY" id="dol-bG-if9"/>
                             <constraint firstItem="tI9-en-cv7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e7Y-XM-9fQ"/>
                             <constraint firstItem="ZIm-Xh-qVp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hCS-WI-mkw"/>
                             <constraint firstItem="0pO-Vp-Rh3" firstAttribute="trailing" secondItem="tI9-en-cv7" secondAttribute="trailing" constant="-15" id="i8T-rn-vPo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WTI-CB-2ve" secondAttribute="bottom" constant="8" id="mom-ZQ-azg"/>
+                            <constraint firstItem="WTI-CB-2ve" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="nad-43-ZLg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZIm-Xh-qVp" secondAttribute="bottom" id="sbV-kN-Tbu"/>
                             <constraint firstItem="0pO-Vp-Rh3" firstAttribute="centerY" secondItem="tI9-en-cv7" secondAttribute="centerY" id="xWd-uU-s2m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outputLable" destination="0pO-Vp-Rh3" id="0Jf-kY-deA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.125" y="122.5"/>
+            <point key="canvasLocation" x="118.125" y="121.47887323943662"/>
         </scene>
     </scenes>
     <resources>
@@ -278,6 +310,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
